@@ -1,0 +1,35 @@
+{
+  "config" : {
+    "baseUrl" : "http://www.rackspace.com"
+  },
+  "checks" :[
+    {
+      "path" : "/about",
+      "asserts" : [
+        {
+          "action" : "isPresent",
+          "locator" :"a.subnav1.sign_up.fancybox",
+          "value":"NONE"
+        },
+        {
+          "action" : "isNotPresent",
+          "locator" :"a.subnav1.sign_up.fancybox",
+          "value":"NONE"
+        },
+        {
+          "action" : "contains",
+          "locator" :"a.subnav.sign_up.fancybox",
+          "value":"Contact Us"
+        },
+        {
+          "action" : "notContains",
+          "locator" :"a.subnav.sign_up.fancybox",
+          "value":"Contact Us"
+        }
+      ]
+    }
+
+  ]
+
+
+}
